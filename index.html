@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Saint Lazare — Brasserie · Friterie à Maubeuge (maquette)</title>
+<meta name="description" content="Le Saint Lazare, brasserie-friterie à Maubeuge. Réservez en ligne, composez votre commande, emportez ou faites-vous livrer. Cuisine généreuse, esprit belge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#26384A; --navy-fonce:#1A2733; --rouge:#DD2C24; --rouge-fonce:#B81F19;
+    --creme:#FBF8F4; --surface:#FFFFFF; --gris:#5E6B78; --ligne:#E8E2D8; --jaune:#F2B441;
+    --encre:#22303C;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.55}
+  h1,h2,h3,.serif{font-family:"Fraunces",Georgia,serif}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:600;font-size:15px;cursor:pointer;border:none;transition:.15s}
+  .btn-red{background:var(--rouge);color:#fff}.btn-red:hover{background:var(--rouge-fonce)}
+  .btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:var(--navy-fonce)}
+  .btn-ghost{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.55);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.18)}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--ligne)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+  .nav img.logo{height:46px;width:auto}
+  .menu{display:flex;align-items:center;gap:24px;font-size:14.5px;font-weight:500;color:var(--navy)}
+  .menu a:not(.btn):hover{color:var(--rouge)}
+  .menu .btn{padding:9px 17px;font-size:14px}
+  @media(max-width:760px){.menu a:not(.btn){display:none}.nav img.logo{height:38px}}
+
+  .hero{position:relative;color:#fff;min-height:520px;display:flex;align-items:center;
+    background:linear-gradient(90deg,rgba(26,39,51,.92) 0%,rgba(26,39,51,.62) 55%,rgba(26,39,51,.25) 100%),url('photos/Friterie-snack-a-Maubeuge.jpeg');
+    background-size:cover;background-position:center}
+  .hero .wrap{padding:64px 22px}
+  .eyebrow{font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--jaune)}
+  .hero h1{font-size:52px;line-height:1.03;font-weight:700;margin:12px 0 10px;max-width:14ch}
+  @media(max-width:760px){.hero h1{font-size:38px}.hero{min-height:440px}}
+  .hero p.lead{font-size:17px;color:#e7eef3;max-width:34ch}
+  .rating{display:inline-flex;align-items:center;gap:9px;margin-top:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:8px 14px;border-radius:999px;font-size:13.5px}
+  .stars{color:var(--jaune);letter-spacing:1px}
+  .cta{display:flex;gap:11px;flex-wrap:wrap;margin-top:24px}
+
+  .trust{background:var(--navy)}
+  .trust .wrap{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;padding:14px 22px;font-size:13.5px;font-weight:500;color:#cdd8e0}
+  .trust b{color:#fff}
+
+  section{padding:62px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 34px}
+  .sec-head .eyebrow{color:var(--rouge)}
+  .sec-head h2{font-size:32px;color:var(--navy);margin-top:8px;font-weight:600}
+  .sec-head p{color:var(--gris);margin-top:8px}
+
+  /* Univers */
+  .univers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:780px){.univers{grid-template-columns:repeat(2,1fr)}}
+  .uni{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;color:#fff}
+  .uni img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .uni span{position:absolute;left:0;right:0;bottom:0;padding:16px 16px 14px;font-family:"Fraunces";font-weight:600;font-size:18px;z-index:2;
+    background:linear-gradient(0deg,rgba(26,39,51,.85),transparent)}
+
+  /* Avis */
+  .avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:780px){.avis-grid{grid-template-columns:1fr}}
+  .avis{background:var(--surface);border:1px solid var(--ligne);border-radius:16px;padding:22px}
+  .avis .stars{font-size:15px}.avis q{display:block;font-size:15px;margin:10px 0 14px;color:#33414c}
+  .avis .who{font-size:13px;color:var(--gris);font-weight:500}
+
+  /* Commande */
+  .order{background:var(--navy);color:#fff}
+  .order .sec-head h2{color:#fff}.order .sec-head .eyebrow{color:var(--jaune)}.order .sec-head p{color:#c3d0d9}
+  .order-layout{display:grid;grid-template-columns:1.7fr 1fr;gap:22px;align-items:start}
+  @media(max-width:860px){.order-layout{grid-template-columns:1fr}}
+  .cat{margin-bottom:22px}
+  .cat h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--jaune);margin-bottom:10px}
+  .item{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 14px;margin-bottom:9px}
+  .item .info{flex:1;background:none;border:0;padding:0;border-radius:0;color:#fff}
+  .item .info b{font-weight:600;font-size:15px}
+  .item .info p{font-size:12.5px;color:#aebac4;margin-top:2px}
+  .item .pr{font-family:"Fraunces";font-weight:600;font-size:15px;white-space:nowrap}
+  .item .add{background:var(--rouge);color:#fff;border:none;border-radius:9px;padding:8px 12px;font-weight:700;font-size:13px;cursor:pointer;transition:.15s}
+  .item .add:hover{background:var(--rouge-fonce)}
+  .item .add.done{background:#2e9e5b}
+  .item{flex-wrap:wrap}
+  .item .compose{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.28);border-radius:9px;padding:8px 13px;font-weight:600;font-size:13px;cursor:pointer}
+  .item .compose:hover{background:rgba(255,255,255,.18)}
+  .opts{flex-basis:100%;margin-top:11px;padding-top:11px;border-top:1px solid rgba(255,255,255,.12);display:none}
+  .item.open .opts{display:block}
+  .opts .grp{margin-bottom:9px}
+  .opts .gl{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#9fb0bd;margin-bottom:5px}
+  .opts select,.opts .note-in{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:8px;padding:9px 10px;font-size:13px;font-family:inherit}
+  .opts select option{color:#22303C}
+  .opts .supps{display:flex;flex-wrap:wrap;gap:7px}
+  .opts .supp{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:7px 10px;font-size:12.5px;cursor:pointer}
+  .opts .supp input{accent-color:var(--rouge);width:15px;height:15px}
+  .opts .addline{background:var(--rouge);color:#fff;border:none;border-radius:9px;padding:10px 16px;font-weight:700;font-size:13px;cursor:pointer;margin-top:4px;transition:.15s}
+  .opts .addline:hover{background:var(--rouge-fonce)}
+  .ci-sub{display:block;font-size:11px;color:var(--gris);margin-top:3px;line-height:1.35}
+  .cart{position:sticky;top:84px;background:#fff;color:var(--encre);border-radius:18px;padding:20px}
+  .cart h3{font-size:17px;color:var(--navy)}
+  #cart-items{margin:14px 0;min-height:60px}
+  .empty{color:var(--gris);font-size:13.5px;padding:16px 0}
+  .ci{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed var(--ligne);font-size:13.5px}
+  .ci-n{flex:1}.ci-c{display:flex;align-items:center;gap:7px}
+  .ci-c button{width:22px;height:22px;border-radius:6px;border:1px solid var(--ligne);background:var(--creme);cursor:pointer;font-weight:700;color:var(--navy)}
+  .ci-c b{min-width:14px;text-align:center}
+  .ci-p{font-weight:600;min-width:54px;text-align:right}
+  .cart-total{display:flex;justify-content:space-between;align-items:center;font-family:"Fraunces";font-weight:600;font-size:19px;color:var(--navy);margin:6px 0 14px}
+  .cart .btn{width:100%}
+  .mode{font-size:11.5px;color:var(--gris);text-align:center;margin-top:10px}
+  .mobile-bar{position:fixed;left:14px;right:14px;bottom:14px;z-index:50;background:var(--navy);color:#fff;border-radius:14px;padding:10px 12px 10px 16px;display:none;align-items:center;justify-content:space-between;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:14px}
+  .mobile-bar.show{display:flex}
+  .mobile-bar .btn{padding:9px 15px;font-size:13px}
+
+  /* Réservation */
+  .resa{background:var(--creme)}
+  .resa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  @media(max-width:860px){.resa .wrap{grid-template-columns:1fr;gap:24px}}
+  .resa h2{font-size:31px;font-weight:600;color:var(--navy)}
+  .resa p{color:var(--gris);margin-top:10px;max-width:40ch}
+  .pill{display:inline-block;margin-top:14px;font-size:12px;background:#fff;border:1px solid var(--ligne);border-radius:999px;padding:6px 12px;color:var(--rouge);font-weight:600}
+  .form{background:#fff;border:1px solid var(--ligne);border-radius:18px;padding:22px}
+  .form h3{font-size:18px;color:var(--navy);margin-bottom:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--gris);margin-bottom:5px}
+  .field input,.field select{width:100%;border:1px solid var(--ligne);border-radius:10px;padding:11px 12px;font-size:14px;font-family:inherit;background:var(--creme)}
+  .form .btn{width:100%;margin-top:4px}.form .note{font-size:11.5px;color:var(--gris);text-align:center;margin-top:10px}
+
+  .infos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:780px){.infos-grid{grid-template-columns:1fr}}
+  .info{background:var(--surface);border:1px solid var(--ligne);border-radius:16px;padding:22px}
+  .info h3{font-size:15px;color:var(--rouge);font-weight:700;margin-bottom:8px}
+  .info p{font-size:14px;color:#3c4a54}.info ul{list-style:none;font-size:13.5px;line-height:1.9}
+  .day{display:flex;justify-content:space-between;border-bottom:1px dashed var(--ligne);padding:2px 0}
+
+  footer{background:var(--navy-fonce);color:#aebcc6;padding:40px 0 30px;text-align:center}
+  footer img{height:54px;margin:0 auto 10px;filter:brightness(0) invert(1);opacity:.9}
+  footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:14px 0;font-size:13.5px}
+  footer .ew{margin-top:16px;font-size:11.5px;color:#7d909c}
+  .maquette-tag{position:fixed;bottom:12px;left:12px;z-index:60;background:#22303C;color:#fff;font-size:11px;padding:7px 12px;border-radius:999px;opacity:.85}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <img class="logo" src="photos/logo.png" alt="Le Saint Lazare">
+    <nav class="menu">
+      <a href="#commande">Commander</a>
+      <a href="#avis">Avis</a>
+      <a href="#infos">Infos &amp; accès</a>
+      <a href="#resa" class="btn btn-red">Réserver</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Maubeuge · cuisine généreuse · esprit belge</div>
+    <h1>La table conviviale du Saint Lazare.</h1>
+    <p class="lead">Brasserie &amp; friterie. Sur place, à emporter ou en livraison — et la vraie frite fraîche.</p>
+    <div class="rating"><span class="stars">★★★★☆</span> <b>4,4/5</b> · 653 avis Google &nbsp;•&nbsp; Travellers' Choice TripAdvisor</div>
+    <div class="cta">
+      <a href="#commande" class="btn btn-red">Composer ma commande</a>
+      <a href="#resa" class="btn btn-ghost">Réserver une table</a>
+    </div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="wrap">
+    <span>🍟 <b>Portions copieuses</b></span>
+    <span>⚡ <b>Service rapide</b></span>
+    <span>🎫 <b>Titres-restaurant</b></span>
+    <span>🛵 <b>Livraison Uber Eats</b></span>
+    <span>📶 <b>Commande au QR sur place</b></span>
+  </div>
+</div>
+
+<!-- UNIVERS (vraies photos du site) -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">La maison</div><h2>Quatre façons d'en profiter</h2></div>
+    <div class="univers">
+      <div class="uni"><img src="photos/Brasserie-a-Maubeuge.jpeg" alt="Brasserie"><span>Brasserie</span></div>
+      <div class="uni"><img src="photos/Friterie-snack-a-Maubeuge.jpeg" alt="Friterie & snack"><span>Friterie &amp; snack</span></div>
+      <div class="uni"><img src="photos/Plats-a-emporter-a-Maubeuge.jpeg" alt="À emporter"><span>À emporter</span></div>
+      <div class="uni"><img src="photos/Livraison-a-Maubeuge.jpeg" alt="Livraison"><span>Livraison</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section id="avis" style="background:var(--surface)">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Vos avis</div><h2>4,4/5 sur Google — et ça se sent</h2>
+      <p>Une réputation déjà solide. On la met en avant, là où vos futurs clients la cherchent.</p></div>
+    <div class="avis-grid">
+      <div class="avis"><div class="stars">★★★★★</div><q>Plat très copieux, rapport qualité-prix incroyable. Service très rapide. Je recommande.</q><div class="who">— Jojo P., oct. 2024</div></div>
+      <div class="avis"><div class="stars">★★★★★</div><q>Parfait. Serveurs géniaux, service très rapide et juste délicieux. On s'est régalé.</q><div class="who">— David D., juin 2024</div></div>
+      <div class="avis"><div class="stars">★★★★☆</div><q>Accueil sympa, endroit propre et bien aménagé. On sent l'influence belge. Rapport qualité-prix excellent !</q><div class="who">— Parenna G., juin 2023</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMANDE (module interactif) -->
+<section id="commande" class="order">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Nouveau · commande express</div><h2>Composez votre commande</h2>
+      <p>Choisissez vos plats, ajoutez-les en un geste. Sur place, scannez le QR à votre table : vous commandez sans attendre.</p></div>
+    <div class="order-layout">
+      <div class="menu-col" id="menu-col"></div>
+      <aside class="cart">
+        <h3>Votre commande</h3>
+        <div id="cart-items"></div>
+        <div class="cart-total">Total <span id="cart-total">0,00 €</span></div>
+        <button class="btn btn-red valider">Valider ma commande</button>
+        <div class="mode">Sur place · À emporter · Livraison — paiement à la fin</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="resa" class="resa">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--rouge)">Nouveau</div>
+      <h2>Réservez votre table en ligne</h2>
+      <p>En deux clics, à toute heure — même quand la salle ne peut pas décrocher. Confirmation immédiate et rappel avant votre venue. Le téléphone reste possible.</p>
+      <span class="pill">Réservation propulsée par Everywhere Réserve</span>
+    </div>
+    <form class="form" onsubmit="return false">
+      <h3>Votre table</h3>
+      <div class="row">
+        <div class="field"><label>Date</label><input type="date" value="2026-07-03"></div>
+        <div class="field"><label>Service</label><select><option>Midi</option><option selected>Soir</option></select></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Heure</label><select><option>19:00</option><option selected>19:30</option><option>20:00</option><option>20:30</option></select></div>
+        <div class="field"><label>Couverts</label><select><option>2</option><option selected>4</option><option>6</option><option>8 +</option></select></div>
+      </div>
+      <div class="field" style="margin-bottom:12px"><label>Nom</label><input type="text" placeholder="Votre nom"></div>
+      <div class="field" style="margin-bottom:14px"><label>Téléphone ou email</label><input type="text" placeholder="Pour la confirmation"></div>
+      <button class="btn btn-navy">Confirmer la réservation</button>
+      <div class="note">Confirmation immédiate · rappel la veille · annulation en un lien.</div>
+    </form>
+  </div>
+</section>
+
+<!-- INFOS -->
+<section id="infos">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Infos &amp; accès</div><h2>Nous trouver</h2></div>
+    <div class="infos-grid">
+      <div class="info"><h3>Adresse</h3><p>15 Route d'Avesnes<br>59600 Maubeuge</p>
+        <p style="margin-top:10px"><a href="tel:0327644310" style="color:var(--navy);font-weight:700">03 27 64 43 10</a></p>
+        <p style="margin-top:8px"><a href="#" style="color:var(--rouge);font-weight:600">↗ Itinéraire</a></p></div>
+      <div class="info"><h3>Horaires</h3><ul>
+        <li class="day"><span>Lundi</span><span>Fermé</span></li>
+        <li class="day"><span>Mar – Sam</span><span>midi &amp; soir</span></li>
+        <li class="day"><span>Dimanche</span><span>18h30 – 21h30</span></li></ul></div>
+      <div class="info"><h3>Emporter &amp; livraison</h3><p>En direct par téléphone ou via <b>Uber Eats</b>. Titres-restaurant acceptés (Swile, Pluxee).</p>
+        <p style="margin-top:10px"><a href="#" class="btn btn-navy" style="padding:9px 16px;font-size:13px">Commander sur Uber Eats</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="photos/logo.png" alt="Le Saint Lazare">
+    <div class="links"><a href="#commande">Commander</a><a href="#resa">Réserver</a><a href="#infos">Accès</a><a href="tel:0327644310">03 27 64 43 10</a></div>
+    <div>15 Route d'Avesnes, 59600 Maubeuge</div>
+    <div class="ew">Site réalisé avec Everywhere · réservation &amp; commande en ligne incluses</div>
+  </div>
+</footer>
+
+<div id="mobile-bar" class="mobile-bar"><span><b id="bar-count">0</b> article(s) · <span id="bar-total">0,00 €</span></span><a href="#commande" class="btn btn-red">Voir ma commande</a></div>
+<div class="maquette-tag">Maquette de démonstration — Everywhere</div>
+
+<script>
+(function(){
+  var SAUCES=["Andalouse","Samouraï","Mayonnaise","Ketchup","Barbecue","Provençale","Tartare","Poivre","Béarnaise","Moutarde","Sans sauce"];
+  var CUISSON=["Saignant","À point","Bien cuit"];
+  var MENU=[
+    {c:"Américains",note:"Sauce au choix incluse · suppléments +0,50 €",sauce:1,supp:[["Crudités",0.5],["Fromage",0.5],["Bacon",0.5]],items:[["Saucisse",6.40],["Fricadelle",6.40],["Cervelas",7.70],["Merguez",7.40],["Steak haché 150g",9.20],["Boulette maison",9.00]]},
+    {c:"Hamburgers",sauce:1,supp:[["Fromage",0.5],["Bacon",0.5]],items:[["Hamburger",5.00],["Cheeseburger",5.40],["Fish burger",5.80],["Maxi burger",6.80],["Burger maison",9.80]]},
+    {c:"Assiettes chaudes",note:"Servies avec frites",cuisson:1,supp:[["Sauce chaude maison (poivre, maroilles…)",2.00]],items:[["Steak haché 150g",12.50],["Brochette de bœuf",12.20],["Carbonnade flamande",15.00],["Bavette Angus",15.50],["Entrecôte",18.50],["Omelette provençale",12.50]]},
+    {c:"Salades",items:[["Salade du pêcheur",14.00],["Salade du chef",14.00],["Salade calamars",14.00],["Salade mixte",16.00]]},
+    {c:"Pittas & sandwichs",sauce:1,items:[["Sandwich pitta",6.80],["Dürüm",6.80],["Américain (sandwich)",9.30],["Barquette",5.60]]},
+    {c:"Frites & sauces",supp:[["Sauce froide",0.80],["Sauce chaude",2.00]],items:[["Frites petite",3.00],["Frites moyenne",3.50],["Frites grande",4.00]]},
+    {c:"Boissons",items:[["Coca-Cola 33cl",2.30],["Orangina 33cl",2.30],["Red Bull 25cl",3.50],["Bière blonde 33cl",3.90],["Anosteke 33cl",5.40]]}
+  ];
+  var fmt=function(n){return n.toFixed(2).replace('.',',')+' €';};
+
+  function optsHtml(cat){
+    var h='';
+    if(cat.sauce)h+='<div class="grp"><span class="gl">Sauce (incluse)</span><select data-role="sauce">'+SAUCES.map(function(s){return '<option>'+s+'</option>';}).join('')+'</select></div>';
+    if(cat.cuisson)h+='<div class="grp"><span class="gl">Cuisson</span><select data-role="cuisson">'+CUISSON.map(function(s){return '<option>'+s+'</option>';}).join('')+'</select></div>';
+    if(cat.supp)h+='<div class="grp"><span class="gl">Suppléments</span><div class="supps">'+cat.supp.map(function(s){return '<label class="supp"><input type="checkbox" data-role="supp" data-label="'+s[0]+'" data-price="'+s[1]+'"> '+s[0]+' +'+fmt(s[1])+'</label>';}).join('')+'</div></div>';
+    h+='<div class="grp"><span class="gl">Note pour la cuisine</span><input type="text" class="note-in" data-role="note" placeholder="ex. sans oignon, à part, allergie…"></div>';
+    h+='<button class="addline">Ajouter au panier</button>';
+    return h;
+  }
+
+  var col=document.getElementById('menu-col'),html='';
+  MENU.forEach(function(cat){
+    html+='<div class="cat"><h3>'+cat.c+'</h3>';
+    if(cat.note)html+='<p style="font-size:12px;color:#aebac4;margin:-4px 0 9px">'+cat.note+'</p>';
+    cat.items.forEach(function(it){
+      html+='<div class="item" data-name="'+it[0]+'" data-price="'+it[1]+'"><div class="info"><b>'+it[0]+'</b></div><span class="pr">'+fmt(it[1])+'</span><button class="compose">Composer</button><div class="opts">'+optsHtml(cat)+'</div></div>';
+    });
+    html+='</div>';
+  });
+  col.innerHTML=html;
+
+  var cart={};
+  function renderCart(){
+    var keys=Object.keys(cart),wrap=document.getElementById('cart-items');
+    if(!keys.length){wrap.innerHTML='<p class="empty">Votre commande est vide. Composez un plat à gauche →</p>';}
+    else{wrap.innerHTML=keys.map(function(k){var it=cart[k];
+      return '<div class="ci"><span class="ci-n">'+it.name+(it.sub?'<span class="ci-sub">'+it.sub+'</span>':'')+'</span><span class="ci-c"><button class="dec" data-m="'+encodeURIComponent(k)+'">−</button><b>'+it.qty+'</b><button class="inc" data-m="'+encodeURIComponent(k)+'">+</button></span><span class="ci-p">'+fmt(it.unit*it.qty)+'</span></div>';}).join('');}
+    var total=0,count=0;keys.forEach(function(k){total+=cart[k].unit*cart[k].qty;count+=cart[k].qty;});
+    document.getElementById('cart-total').textContent=fmt(total);
+    document.getElementById('bar-total').textContent=fmt(total);
+    document.getElementById('bar-count').textContent=count;
+    document.getElementById('mobile-bar').classList.toggle('show',count>0);
+  }
+
+  document.addEventListener('click',function(e){
+    var comp=e.target.closest('.compose');
+    if(comp){comp.closest('.item').classList.toggle('open');return;}
+    var addl=e.target.closest('.addline');
+    if(addl){
+      var item=addl.closest('.item'),name=item.getAttribute('data-name'),unit=parseFloat(item.getAttribute('data-price')),parts=[];
+      var sauce=item.querySelector('[data-role=sauce]');
+      if(sauce){parts.push(sauce.value==='Sans sauce'?'sans sauce':('sauce '+sauce.value.toLowerCase()));}
+      var cuis=item.querySelector('[data-role=cuisson]'); if(cuis)parts.push(cuis.value.toLowerCase());
+      var supps=item.querySelectorAll('[data-role=supp]:checked'),sl=[];
+      supps.forEach(function(s){unit+=parseFloat(s.getAttribute('data-price'));sl.push('+'+s.getAttribute('data-label'));});
+      if(sl.length)parts.push(sl.join(', '));
+      var note=item.querySelector('[data-role=note]'),nt=note&&note.value.trim();
+      if(nt)parts.push('« '+nt+' »');
+      var sub=parts.join(' · '),key=name+'||'+sub;
+      if(!cart[key])cart[key]={name:name,sub:sub,unit:unit,qty:0};
+      cart[key].qty++;renderCart();
+      addl.textContent='✓ Ajouté';addl.style.background='#2e9e5b';
+      setTimeout(function(){addl.textContent='Ajouter au panier';addl.style.background='';item.classList.remove('open');if(note)note.value='';supps.forEach(function(s){s.checked=false;});},650);
+      return;
+    }
+    var inc=e.target.closest('.inc'); if(inc){var ki=decodeURIComponent(inc.getAttribute('data-m'));if(cart[ki]){cart[ki].qty++;renderCart();}return;}
+    var dec=e.target.closest('.dec'); if(dec){var kd=decodeURIComponent(dec.getAttribute('data-m'));if(cart[kd]){cart[kd].qty--;if(cart[kd].qty<=0)delete cart[kd];renderCart();}return;}
+    if(e.target.closest('.valider')){var t=document.getElementById('cart-total').textContent;
+      if(t==='0,00 €'){alert('Composez au moins un plat.');}else{alert('Commande prête : '+t+'.\\nLe détail (sauces, cuissons, notes) part en cuisine.\\n(Maquette — paiement à brancher.)');}}
+  });
+  renderCart();
+
+  // Mode démonstration (?demo / ?demo=resa) : pré-remplit pour les captures de plus-value.
+  // Sans effet sur l'usage normal du site.
+  var qs=location.search+location.hash;
+  if(qs.indexOf('demo')>-1){
+    document.documentElement.style.scrollBehavior='auto';
+    if(qs.indexOf('resa')>-1){setTimeout(function(){var r=document.getElementById('resa');if(r)r.scrollIntoView();},60);}
+    else{
+      var f=document.querySelector('.item');
+      if(f){f.classList.add('open');var s=f.querySelector('[data-role=sauce]');if(s)s.value='Andalouse';var su=f.querySelectorAll('[data-role=supp]');if(su[1])su[1].checked=true;var nt=f.querySelector('[data-role=note]');if(nt)nt.value='bien dorées, à part';}
+      cart['Steak haché 150g||bien cuit · sauce chaude maison']={name:'Steak haché 150g',sub:'bien cuit · sauce chaude maison',unit:14.50,qty:1};
+      cart['Fricadelle||sauce samouraï · +Fromage']={name:'Fricadelle',sub:'sauce samouraï · +Fromage',unit:6.90,qty:2};
+      renderCart();
+      setTimeout(function(){var c=document.getElementById('commande');if(c)c.scrollIntoView();},60);
+    }
+  }
+})();
+</script>
+</body>
+</html>
