@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Le Saint Lazare × Everywhere</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#26384A;--navy2:#1A2733;--rouge:#DD2C24;--rougef:#B81F19;--creme:#FBF8F4;--gris:#8da0ad;--jaune:#E0A23A}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Inter",system-ui,sans-serif;background:var(--navy2);color:#fff;min-height:100vh;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .app{max-width:460px;margin:0 auto;padding:30px 20px 26px;min-height:100vh;display:flex;flex-direction:column}
+  .logo{background:#fff;border-radius:16px;padding:16px;width:fit-content;margin:0 auto}
+  .logo img{height:64px;display:block}
+  h1{font-family:"Fraunces",serif;font-weight:700;font-size:26px;text-align:center;margin-top:22px;line-height:1.12}
+  .sub{text-align:center;color:var(--gris);font-size:13.5px;margin-top:8px}
+  .chip{display:flex;justify-content:center;margin-top:14px}
+  .chip span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600}
+  .chip .st{color:var(--jaune)}
+  .cards{margin-top:26px;display:flex;flex-direction:column;gap:13px;flex:1}
+  .card{display:flex;align-items:center;gap:15px;background:#fff;color:var(--navy);border-radius:16px;padding:18px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.22);transition:.12s}
+  .card:active{transform:scale(.985)}
+  .card .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:24px;flex:none;background:var(--creme)}
+  .card.lead .ic{background:var(--rouge);color:#fff}
+  .card .tx{flex:1}
+  .card .tx b{font-family:"Fraunces",serif;font-weight:600;font-size:17px;display:block}
+  .card .tx small{color:#5E6B78;font-size:12.5px}
+  .card .go{color:var(--rouge);font-weight:700;font-size:20px}
+  .alt{display:block;text-align:center;color:var(--gris);font-size:12.5px;margin-top:16px;text-decoration:underline}
+  .foot{text-align:center;color:#6b7d89;font-size:11px;margin-top:22px}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="logo"><img src="maquette/photos/logo.png" alt="Le Saint Lazare"></div>
+  <h1>Le Saint Lazare<br>en ligne</h1>
+  <div class="sub">Présentation préparée par Everywhere</div>
+  <div class="chip"><span><span class="st">★★★★☆</span> &nbsp;4,4/5 · 653 avis Google</span></div>
+
+  <div class="cards">
+    <a class="card lead" href="https://flaverw.github.io/le-saint-lazare-apercu/" target="_blank" rel="noopener">
+      <div class="ic">🍟</div>
+      <div class="tx"><b>Voir le site</b><small>Réservation + commande en ligne — à vos couleurs</small></div>
+      <div class="go">→</div>
+    </a>
+    <a class="card" href="proposition/proposition-mobile.html">
+      <div class="ic">📄</div>
+      <div class="tx"><b>La proposition</b><small>Le dispositif, le plan, le modèle</small></div>
+      <div class="go">→</div>
+    </a>
+    <a class="card" href="carte-nfc/carte-saintlazare.pdf">
+      <div class="ic">💳</div>
+      <div class="tx"><b>La carte de visite NFC</b><small>Réserver, commander, appeler — en un geste</small></div>
+      <div class="go">→</div>
+    </a>
+  </div>
+
+  <a class="alt" href="proposition/proposition-client.pdf">Version imprimable (PDF A4)</a>
+  <div class="foot">Everywhere · Cabinet d'accompagnement numérique</div>
+</div>
+</body>
+</html>
