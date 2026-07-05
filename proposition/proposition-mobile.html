@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
 <title>Le Saint Lazare — votre site, déjà prêt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +46,21 @@
   .reassure li{padding-left:20px}
   .reassure li::before{content:"✓";background:none;color:var(--rouge);font-weight:700;width:auto;height:auto;top:0;font-size:13px}
   .marche{font-size:12.5px;color:var(--gris);font-style:italic;margin-top:12px;padding:0 2px}
+  /* gamme */
+  .gamme{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+  .g{border:1px solid var(--ligne);border-radius:14px;padding:14px 15px;background:#fff}
+  .g.g1{background:var(--navy);border-color:var(--navy);color:#fff}
+  .g .gk{font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--rouge)}
+  .g1 .gk{color:var(--jaune)}
+  .g .gp{font-family:"Fraunces",serif;font-weight:700;font-size:20px;color:var(--navy);margin:2px 0 4px;line-height:1.1}
+  .g1 .gp{color:#fff}
+  .g .gp span{display:block;font-family:"Inter";font-size:11.5px;font-weight:500;color:var(--gris);margin-top:2px}
+  .g1 .gp span{color:#c3d0d9}
+  .g ul{margin-top:6px}
+  .g li{font-size:12.5px;color:var(--encre)}
+  .g1 li{color:#e2e9ee}
+  .g1 li::before{background:var(--jaune)}
+  .g li b,.g1 li b{color:inherit}
   /* CTA */
   .cta{background:var(--navy);color:#fff;border-radius:16px;padding:20px 18px;margin-top:16px;text-align:center}
   .cta h2{color:#fff}
@@ -66,18 +80,18 @@
     <h1>Vos clients vous adorent.<br>Votre site, lui,<br><span class="red">n'en dit rien.</span></h1>
     <p>On ne peut ni réserver ni commander chez vous en ligne — alors que votre maison a une vraie réputation. Voici un site à sa hauteur. <b style="color:var(--rouge)">Il existe déjà.</b></p>
 
-    <div class="shot"><img src="preuve-mobile.png" alt="Votre site sur mobile"></div>
+    <div class="shot"><img src="../maquette/preuve-mobile.png" alt="Votre site sur mobile"></div>
     <div class="shotcap"><b>Votre futur site</b> — à vos couleurs, avec vos photos.</div>
 
     <div class="feat">
-      <div class="shot"><img src="preuve-commande.png" alt="Commande"></div>
+      <div class="shot"><img src="../maquette/preuve-commande.png" alt="Commande"></div>
       <div class="k">Commander, réglé pour la cuisine</div>
       <div class="d">Sauce, suppléments, cuisson, note : la commande part détaillée. Au comptoir ou au QR de table.</div>
       <div class="vs">→ ce que le site actuel ne permet pas encore</div>
     </div>
 
     <div class="feat">
-      <div class="shot"><img src="preuve-resa.png" alt="Réservation"></div>
+      <div class="shot"><img src="../maquette/preuve-resa.png" alt="Réservation"></div>
       <div class="k">Réserver sans appeler</div>
       <div class="d">Créneau, confirmation immédiate, rappel — même quand la salle ne décroche pas.</div>
       <div class="vs">→ aujourd'hui : réservation par téléphone seulement</div>
@@ -118,7 +132,42 @@
       </ul>
     </div>
 
-    <p class="marche">À Maubeuge, la réservation en ligne devient la norme : Au Bureau et L'Arrêt du Temps la proposent déjà.</p>
+    <div class="sec">
+      <h2>La gamme — trois formules</h2>
+      <div class="gamme">
+        <div class="g g1">
+          <div class="gk">Origine — le point de départ</div>
+          <div class="gp">299 €<span>puis 99 €/mois, sans engagement de durée</span></div>
+          <ul>
+            <li>La création de votre site — celui de la maquette — et sa mise en ligne : 299 €.</li>
+            <li>Puis 99 €/mois : hébergement, nom de domaine et suivi léger (horaires, prix, photos), sauvegardes, petites corrections.</li>
+            <li>Compris au départ : les <b>5 guides pas-à-pas</b> et votre <b>étude d'économies sous 48 h</b>.</li>
+          </ul>
+        </div>
+        <div class="g">
+          <div class="gk">Singulier</div>
+          <div class="gp">+200 €/mois<span>en plus d'Origine</span></div>
+          <ul>
+            <li>Tout Origine, plus le <b>kit physique</b> façonné par notre atelier partenaire :</li>
+            <li><b>carte NFC prototype</b> — on approche le téléphone, votre site s'ouvre ;</li>
+            <li><b>textiles prototypes brodés</b> « Le Saint Lazare », déclinés en plusieurs couleurs au fil de l'abonnement ;</li>
+            <li><b>chevalet QR</b> de comptoir. Les prototypes évoluent pendant l'abonnement.</li>
+          </ul>
+        </div>
+        <div class="g">
+          <div class="gk">Everywhere</div>
+          <div class="gp">Sur mesure<span>de vive voix</span></div>
+          <ul>
+            <li><b>L'équipe habillée</b> : textiles brodés pour chaque membre, tailles et couleurs au choix, réassort saisonnier.</li>
+            <li><b>La panoplie NFC complète</b> : cartes pour l'équipe, plaque de comptoir, chevalets de table, stickers vitrine, porte-clés — dont « votre avis en un tap ».</li>
+            <li><b>Le site premium</b> : animations signature, modules avancés (réservation, commande, back-office), séance photo, pages supplémentaires.</li>
+            <li><b>Le suivi renforcé</b> : statistiques mensuelles commentées, priorité de support, formation IA en visio chaque trimestre, étude d'économies renouvelée chaque année.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="marche">Chaque formule se valide ensemble, de vive voix — sans engagement de durée. À Maubeuge, la réservation en ligne devient la norme : Au Bureau et L'Arrêt du Temps la proposent déjà.</p>
 
     <div class="cta">
       <h2>On en parle 20 minutes ?</h2>

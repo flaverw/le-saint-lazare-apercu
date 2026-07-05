@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>L'offre — Le Saint Lazare × Everywhere</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#26384A; --navy-fonce:#1A2733; --rouge:#DD2C24; --rouge-fonce:#B81F19;
+    --creme:#FBF8F4; --surface:#FFFFFF; --gris:#5E6B78; --ligne:#E8E2D8; --jaune:#F2B441;
+    --encre:#22303C; --ombre:0 10px 30px rgba(38,56,74,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.6;font-size:16px}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;color:var(--navy)}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  .bandeau{background:var(--navy-fonce);color:#e7eef3;text-align:center;font-size:12.5px;padding:8px 14px;letter-spacing:.02em}
+  .bandeau strong{color:var(--jaune);font-weight:600}
+
+  header{background:var(--surface);border-bottom:1px solid var(--ligne)}
+  .entete{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;flex-wrap:wrap}
+  .logo{font-family:"Fraunces",serif;font-size:24px;font-weight:700;color:var(--navy);letter-spacing:.01em}
+  .logo small{display:block;font-family:"Inter";font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--rouge);margin-top:2px}
+  .retour{font-size:13.5px;font-weight:600;color:var(--rouge);display:inline-flex;align-items:center;gap:7px}
+  .retour:hover{color:var(--rouge-fonce)}
+
+  .tete{background:var(--navy);color:var(--creme);padding:56px 0 60px;text-align:center}
+  .sur-titre{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--jaune);font-weight:700;margin-bottom:10px}
+  .tete h1{color:#fff;font-size:clamp(28px,4.2vw,42px);margin-bottom:14px;font-weight:700}
+  .tete p{color:#cdd8e0;max-width:60ch;margin:0 auto}
+
+  .formules{padding:54px 0 66px}
+  .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;align-items:start}
+  .formule{background:var(--surface);border:1px solid var(--ligne);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;gap:13px;box-shadow:var(--ombre)}
+  .formule.depart{border:2px solid var(--jaune);position:relative}
+  .badge{position:absolute;top:-13px;left:24px;background:var(--jaune);color:var(--navy-fonce);font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;border-radius:999px;padding:4px 14px}
+  .formule h2{font-size:23px}
+  .formule .prix{font-family:"Fraunces",serif;font-weight:700;font-size:29px;color:var(--navy);line-height:1.2}
+  .formule .prix small{display:block;font-family:"Inter",sans-serif;font-size:13px;color:var(--gris);font-weight:400;margin-top:4px}
+  .formule ul{list-style:none;display:grid;gap:10px;font-size:14px;color:var(--encre)}
+  .formule li{padding-left:22px;position:relative}
+  .formule li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--rouge)}
+  .formule li b{color:var(--navy)}
+  .formule .note-f{font-size:12.5px;color:var(--gris);border-top:1px solid var(--ligne);padding-top:12px;margin-top:auto}
+  .formule.everywhere{background:var(--navy);border-color:var(--navy)}
+  .formule.everywhere h2,.formule.everywhere .prix{color:#fff}
+  .formule.everywhere .prix small{color:#cdd8e0}
+  .formule.everywhere ul{color:#e2e9ee}
+  .formule.everywhere li b{color:#fff}
+  .formule.everywhere li::before{background:var(--jaune)}
+  .formule.everywhere .note-f{color:#aebcc6;border-top-color:rgba(255,255,255,.18)}
+
+  .precisions{background:var(--surface);border-top:1px solid var(--ligne);padding:42px 0 50px}
+  .precisions p{max-width:72ch;color:var(--gris);font-size:14px;margin-bottom:8px}
+
+  footer{background:var(--navy-fonce);color:#aebcc6;padding:28px 0;font-size:13px;text-align:center}
+
+  @media (max-width:640px){
+    .formules{padding:40px 0 50px}
+    .tete{padding:44px 0 48px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bandeau"><strong>Maquette de démonstration</strong> — proposée par Everywhere Digital. Aucun engagement, aucune commande réelle, aucun paiement.</div>
+
+<header>
+  <div class="wrap">
+    <div class="entete">
+      <a class="logo" href="../index.html" aria-label="Le Saint Lazare">Le Saint Lazare<small>Brasserie · Friterie · Maubeuge</small></a>
+      <a class="retour" href="../index.html">&larr; Revenir à la maquette</a>
+    </div>
+  </div>
+</header>
+
+<div class="tete">
+  <div class="wrap">
+    <p class="sur-titre">L'offre Everywhere</p>
+    <h1>Trois formules, un point de départ</h1>
+    <p>Le site que vous venez de parcourir existe déjà. Voici comment il se met en ligne, ce qu'il coûte, et ce que chaque formule ajoute. Tout se décide de vive voix, rien ne s'engage sans vous.</p>
+  </div>
+</div>
+
+<section class="formules">
+  <div class="wrap">
+    <div class="grille">
+
+      <div class="formule depart">
+        <span class="badge">Le point de départ</span>
+        <h2>Origine</h2>
+        <div class="prix">299 €<small>puis 99 €/mois, sans engagement de durée</small></div>
+        <ul>
+          <li>La création du site — celui de la maquette — et sa mise en ligne : 299 €.</li>
+          <li>Puis 99 €/mois : hébergement, nom de domaine, et le suivi léger — modifications simples (horaires, prix, photos), sauvegardes, petites corrections.</li>
+          <li>Compris au départ : les 5 guides pas-à-pas et l'étude d'économies sous 48 h.</li>
+        </ul>
+        <p class="note-f">L'abonnement s'arrête sur simple demande.</p>
+      </div>
+
+      <div class="formule">
+        <h2>Singulier</h2>
+        <div class="prix">+200 €/mois<small>en plus de la formule Origine</small></div>
+        <ul>
+          <li>Tout Origine, plus le kit physique façonné par notre atelier partenaire :</li>
+          <li>carte NFC prototype personnalisée — on approche le téléphone, votre site s'ouvre ;</li>
+          <li>textiles prototypes brodés « Le Saint Lazare », déclinés en plusieurs couleurs au fil de l'abonnement ;</li>
+          <li>chevalet QR de comptoir.</li>
+        </ul>
+        <p class="note-f">Les prototypes évoluent pendant l'abonnement.</p>
+      </div>
+
+      <div class="formule everywhere">
+        <h2>Everywhere</h2>
+        <div class="prix">Sur mesure<small>de vive voix</small></div>
+        <ul>
+          <li>L'équipe habillée : textiles brodés pour chaque membre, tailles et couleurs au choix, réassort saisonnier.</li>
+          <li>La panoplie NFC complète : cartes pour toute l'équipe, plaque de comptoir, chevalets de table, stickers vitrine, porte-clés — dont « votre avis en un tap ».</li>
+          <li>Le site premium : animations signature de votre métier, modules avancés (réservation, commande, back-office selon le métier), séance photo, pages supplémentaires.</li>
+          <li>Le suivi renforcé : statistiques mensuelles commentées, priorité de support, formation IA en visio chaque trimestre, étude d'économies renouvelée chaque année.</li>
+        </ul>
+        <p class="note-f">Le contenu exact se définit ensemble, de vive voix.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="precisions">
+  <div class="wrap">
+    <p class="sur-titre" style="color:var(--rouge)">Ce que cela signifie</p>
+    <p>Les montants affichés sont ceux de la gamme, tels quels. Chaque formule est sans engagement de durée : elle s'arrête sur simple demande. Le site vous appartient — si vous partez, vous gardez tout.</p>
+    <p>Nous ne promettons ni chiffre d'affaires, ni volume de réservations : nous décrivons ce que chaque formule contient, et vous jugez sur pièce. Avant tout changement, nous regardons ensemble votre engagement actuel.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Démonstration Everywhere — tout se valide ensemble, sans engagement.
+  </div>
+</footer>
+
+</body>
+</html>
