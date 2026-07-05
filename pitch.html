@@ -1,65 +1,76 @@
-<!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Le Saint Lazare × Everywhere</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- cadenas-everywhere -->
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Accès protégé — Everywhere</title>
 <style>
-  :root{--navy:#26384A;--navy2:#1A2733;--rouge:#DD2C24;--rougef:#B81F19;--creme:#FBF8F4;--gris:#8da0ad;--jaune:#E0A23A}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:"Inter",system-ui,sans-serif;background:var(--navy2);color:#fff;min-height:100vh;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .app{max-width:460px;margin:0 auto;padding:30px 20px 26px;min-height:100vh;display:flex;flex-direction:column}
-  .logo{background:#fff;border-radius:16px;padding:16px;width:fit-content;margin:0 auto}
-  .logo img{height:64px;display:block}
-  h1{font-family:"Fraunces",serif;font-weight:700;font-size:26px;text-align:center;margin-top:22px;line-height:1.12}
-  .sub{text-align:center;color:var(--gris);font-size:13.5px;margin-top:8px}
-  .chip{display:flex;justify-content:center;margin-top:14px}
-  .chip span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600}
-  .chip .st{color:var(--jaune)}
-  .cards{margin-top:26px;display:flex;flex-direction:column;gap:13px;flex:1}
-  .card{display:flex;align-items:center;gap:15px;background:#fff;color:var(--navy);border-radius:16px;padding:18px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.22);transition:.12s}
-  .card:active{transform:scale(.985)}
-  .card .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:24px;flex:none;background:var(--creme)}
-  .card.lead .ic{background:var(--rouge);color:#fff}
-  .card .tx{flex:1}
-  .card .tx b{font-family:"Fraunces",serif;font-weight:600;font-size:17px;display:block}
-  .card .tx small{color:#5E6B78;font-size:12.5px}
-  .card .go{color:var(--rouge);font-weight:700;font-size:20px}
-  .alt{display:block;text-align:center;color:var(--gris);font-size:12.5px;margin-top:16px;text-decoration:underline}
-  .foot{text-align:center;color:#6b7d89;font-size:11px;margin-top:22px}
-</style>
-</head>
+:root{--noir:#14110f;--or:#c9a24b;--creme:#f3ecdd}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh;
+ background:radial-gradient(120% 120% at 50% 0%,#241f1a,var(--noir));color:var(--creme);
+ display:flex;align-items:center;justify-content:center;padding:24px}
+.card{max-width:420px;width:100%;text-align:center}
+.mark{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--or);margin-bottom:18px}
+.lock{font-size:40px;margin-bottom:14px}
+h1{font-size:22px;font-weight:600;line-height:1.25;margin-bottom:8px}
+p.sub{font-size:14px;color:#b9b0a0;margin-bottom:22px;line-height:1.5}
+form{display:flex;gap:8px;flex-direction:column}
+input{width:100%;background:#1c1814;border:1px solid rgba(201,162,75,.4);color:var(--creme);
+ padding:14px 16px;font-size:16px;border-radius:8px;text-align:center;letter-spacing:.05em}
+input:focus{outline:none;border-color:var(--or)}
+button{background:var(--or);color:var(--noir);border:none;padding:14px;font-size:15px;font-weight:600;
+ border-radius:8px;cursor:pointer;letter-spacing:.03em}
+button:hover{filter:brightness(1.08)}
+.err{color:#e6857a;font-size:13px;min-height:18px;margin-top:4px}
+.foot{margin-top:26px;font-size:11px;color:#7c7364;line-height:1.5}
+</style></head>
 <body>
-<div class="app">
-  <div class="logo"><img src="maquette/photos/logo.png" alt="Le Saint Lazare"></div>
-  <h1>Le Saint Lazare<br>en ligne</h1>
-  <div class="sub">Présentation préparée par Everywhere</div>
-  <div class="chip"><span><span class="st">★★★★☆</span> &nbsp;4,4/5 · 653 avis Google</span></div>
-
-  <div class="cards">
-    <a class="card lead" href="https://flaverw.github.io/le-saint-lazare-apercu/" target="_blank" rel="noopener">
-      <div class="ic">🍟</div>
-      <div class="tx"><b>Voir le site</b><small>Réservation + commande en ligne — à vos couleurs</small></div>
-      <div class="go">→</div>
-    </a>
-    <a class="card" href="proposition/proposition-mobile.html">
-      <div class="ic">📄</div>
-      <div class="tx"><b>La proposition</b><small>Le dispositif, le plan, le modèle</small></div>
-      <div class="go">→</div>
-    </a>
-    <a class="card" href="carte-nfc/carte-saintlazare.pdf">
-      <div class="ic">💳</div>
-      <div class="tx"><b>La carte de visite NFC</b><small>Réserver, commander, appeler — en un geste</small></div>
-      <div class="go">→</div>
-    </a>
-  </div>
-
-  <a class="alt" href="proposition/proposition-client.pdf">Version imprimable (PDF A4)</a>
-  <div class="foot">Everywhere · Cabinet d'accompagnement numérique</div>
+<div class="card">
+  <div class="mark">Everywhere</div>
+  <div class="lock">&#128274;</div>
+  <h1>Accès protégé</h1>
+  <p class="sub">Cette démonstration est réservée. Saisissez votre code d'accès pour la consulter.</p>
+  <form id="f"><input id="pw" type="password" placeholder="Code d'accès" autocomplete="off" autofocus>
+  <button type="submit">Entrer</button></form>
+  <div class="err" id="e"></div>
+  <div class="foot">Everywhere — cabinet d'accompagnement numérique.<br>Contenu chiffré. Un code par visiteur, communiqué par Everywhere.</div>
 </div>
-</body>
-</html>
+<script>
+(function(){
+ var D={"v":1,"iters":210000,"iv":"W8ZWzCQ3b1Y0grP0","ct":"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","wraps":[{"role":"client","salt":"5qYBv1iqtWZia9JSO1Aw7w==","iv":"MrWIypjW/bHqlzW5","wrapped":"TbBpi3gl02IDST1MsNr06FTJYXaSOber+Em0D9fMQYWlLPHkDVWyj0pnj5He6ZK8"}]};
+ var dec=function(s){var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;};
+ var enc=new TextEncoder();
+ async function derive(pw,salt){
+  var km=await crypto.subtle.importKey('raw',enc.encode(pw),'PBKDF2',false,['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:D.iters,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+ }
+ async function tryUnlock(pw){
+  for(var i=0;i<D.wraps.length;i++){
+   var w=D.wraps[i];
+   try{
+    var wk=await derive(pw,dec(w.salt));
+    var ckRaw=new Uint8Array(await crypto.subtle.decrypt({name:'AES-GCM',iv:dec(w.iv)},wk,dec(w.wrapped)));
+    var ck=await crypto.subtle.importKey('raw',ckRaw,'AES-GCM',false,['decrypt']);
+    var html=new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:dec(D.iv)},ck,dec(D.ct)));
+    return {ok:true,role:w.role,html:html};
+   }catch(e){}
+  }
+  return {ok:false};
+ }
+ function render(html){document.open();document.write(html);document.close();}
+ async function boot(){
+  var pw=null;try{pw=sessionStorage.getItem('ew_pass');}catch(e){}
+  if(pw){var r=await tryUnlock(pw);if(r.ok){render(r.html);return;}}
+  document.getElementById('f').addEventListener('submit',async function(ev){
+   ev.preventDefault();
+   var v=document.getElementById('pw').value;
+   document.getElementById('e').textContent='';
+   var r=await tryUnlock(v);
+   if(r.ok){try{sessionStorage.setItem('ew_pass',v);}catch(e){}render(r.html);}
+   else{document.getElementById('e').textContent='Code incorrect.';document.getElementById('pw').select();}
+  });
+ }
+ if(!crypto||!crypto.subtle){document.getElementById('e').textContent='Navigateur non compatible.';}else{boot();}
+})();
+</script>
+</body></html>
