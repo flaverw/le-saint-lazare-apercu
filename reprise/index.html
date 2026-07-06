@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Saint Lazare — Brasserie · Restauration · Friterie à Maubeuge (maquette, version reprise)</title>
+<meta name="description" content="Le Saint Lazare à Maubeuge : brasserie, restauration traditionnelle et friterie. Sur place, à emporter ou en livraison. Version maquette fidèle à l'identité actuelle.">
+<!-- Maquette Everywhere — « version reprise » : l'identité actuelle du Saint Lazare, remise au propre.
+     Photos = illustrations issues du site actuel, à remplacer par les vôtres. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --marine:#26384A; --marine-fonce:#1C2A38; --rouge:#DD2C24; --rouge-fonce:#B81F19;
+    --blanc:#FFFFFF; --fond:#F6F8FA; --ligne:#E3E8EC; --encre:#2A3743; --gris:#61707D;
+    --ombre:0 12px 30px rgba(38,56,74,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--encre);background:var(--blanc);line-height:1.6}
+  h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--marine);line-height:1.16}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .script{font-family:"Grand Hotel",cursive;color:var(--rouge);font-size:26px;line-height:1;letter-spacing:.01em}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:13px 22px;font-weight:700;font-size:15px;cursor:pointer;border:none;transition:.15s;font-family:inherit}
+  .btn-rouge{background:var(--rouge);color:#fff}.btn-rouge:hover{background:var(--rouge-fonce)}
+  .btn-marine{background:var(--marine);color:#fff}.btn-marine:hover{background:var(--marine-fonce)}
+  .btn-contour{background:#fff;color:var(--marine);border:1.5px solid var(--ligne)}.btn-contour:hover{border-color:var(--marine)}
+
+  /* Bandeau haut */
+  .topbar{background:var(--marine);color:#D7E0E8;font-size:13px}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:14px;padding:8px 22px;flex-wrap:wrap}
+  .topbar b{color:#fff}
+  .topbar a{color:#fff;font-weight:700}
+  @media(max-width:640px){.topbar .horaires{display:none}}
+
+  /* En-tête */
+  header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--ligne)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:14px}
+  .nav img.logo{height:52px;width:auto}
+  .menu{display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:700;color:var(--marine)}
+  .menu a:not(.btn):hover{color:var(--rouge)}
+  .menu .btn{padding:10px 16px;font-size:14px;border-radius:999px}
+  @media(max-width:820px){.menu a:not(.btn){display:none}.nav img.logo{height:42px}}
+
+  /* Héro */
+  .hero{background:#fff}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding-top:58px;padding-bottom:58px}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:30px;padding-top:38px;padding-bottom:44px}}
+  .hero h1{font-size:clamp(30px,4.6vw,46px);font-weight:700;margin:10px 0 14px;max-width:18ch}
+  .hero h1 em{font-style:normal;color:var(--rouge)}
+  .hero p.lead{font-size:16.5px;color:var(--gris);max-width:46ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+  .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:var(--fond);border:1px solid var(--ligne);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--marine)}
+  .badge .stars{color:#E9A93D;letter-spacing:1px}
+  .hero .visuel{position:relative}
+  .hero .visuel img{width:100%;height:auto;border-radius:16px}
+  .hero .visuel .ruban{position:absolute;left:-8px;bottom:18px;background:var(--rouge);color:#fff;font-family:"Grand Hotel",cursive;font-size:22px;padding:8px 18px 6px;border-radius:8px;box-shadow:var(--ombre)}
+  @media(max-width:860px){.hero .visuel .ruban{left:10px}}
+
+  /* Ruban de confiance */
+  .fil{background:var(--fond);border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne)}
+  .fil .wrap{display:flex;gap:10px 28px;justify-content:center;flex-wrap:wrap;padding:13px 22px;font-size:13.5px;font-weight:700;color:var(--marine)}
+  .fil span b{color:var(--rouge)}
+
+  section{padding:64px 0}
+  .sec-head{text-align:center;max-width:660px;margin:0 auto 36px}
+  .sec-head h2{font-size:clamp(26px,3.4vw,34px);font-weight:700;margin-top:6px}
+  .sec-head p{color:var(--gris);margin-top:10px}
+
+  /* La maison — 4 services (structure du site actuel) */
+  .services{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  @media(max-width:760px){.services{grid-template-columns:1fr}}
+  .service{background:#fff;border:1px solid var(--ligne);border-radius:16px;overflow:hidden;box-shadow:var(--ombre)}
+  .service img{width:100%;height:210px;object-fit:cover}
+  .service .txt{padding:20px 22px 22px}
+  .service h3{font-size:20px;font-weight:600}
+  .service h3 span{color:var(--rouge)}
+  .service p{font-size:14px;color:var(--gris);margin-top:7px}
+
+  /* La carte */
+  .carte{background:var(--fond)}
+  .carte .note-haut{text-align:center;font-size:13px;color:var(--gris);max-width:56ch;margin:-18px auto 30px}
+  .carte-grille{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:820px){.carte-grille{grid-template-columns:1fr}}
+  .cat{background:#fff;border:1px solid var(--ligne);border-radius:16px;padding:24px 24px 18px;box-shadow:var(--ombre)}
+  .cat h3{display:flex;align-items:baseline;gap:10px;font-size:20px;font-weight:600;padding-bottom:12px;border-bottom:2px solid var(--rouge);margin-bottom:8px}
+  .cat h3 .fil-note{font-family:"Nunito Sans";font-size:12px;font-weight:600;color:var(--gris)}
+  .plat{display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px dashed var(--ligne);font-size:14.5px}
+  .plat:last-child{border-bottom:none}
+  .plat .nom{font-weight:700;color:var(--encre)}
+  .plat .pointes{flex:1;border-bottom:2px dotted var(--ligne);transform:translateY(-4px)}
+  .plat .prix{font-family:"Lora",serif;font-weight:600;color:var(--marine);white-space:nowrap}
+  .cat .mention{font-size:12px;color:var(--gris);margin-top:10px}
+  .carte-bas{text-align:center;font-size:13px;color:var(--gris);margin-top:26px}
+
+  /* Avis */
+  .avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:780px){.avis-grid{grid-template-columns:1fr}}
+  .avis{background:#fff;border:1px solid var(--ligne);border-radius:16px;padding:22px;box-shadow:var(--ombre)}
+  .avis .stars{color:#E9A93D;letter-spacing:2px;font-size:15px}
+  .avis q{display:block;font-size:14.5px;margin:10px 0 12px;color:var(--encre)}
+  .avis .who{font-size:13px;color:var(--gris);font-weight:700}
+
+  /* Réservation */
+  .resa{background:var(--marine);color:#fff}
+  .resa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  @media(max-width:860px){.resa .wrap{grid-template-columns:1fr;gap:26px}}
+  .resa .script{color:#F2B441}
+  .resa h2{color:#fff;font-size:clamp(26px,3.4vw,34px);margin-top:6px}
+  .resa p{color:#C6D2DC;margin-top:12px;max-width:44ch}
+  .tel-bloc{margin-top:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:18px 20px}
+  .tel-bloc .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9FB2C0;font-weight:800}
+  .tel-bloc a.num{display:block;font-family:"Lora",serif;font-size:30px;font-weight:700;color:#fff;margin-top:4px}
+  .tel-bloc small{display:block;color:#C6D2DC;font-size:12.5px;margin-top:4px}
+  .form{background:#fff;color:var(--encre);border:1px solid var(--ligne);border-radius:16px;padding:24px;box-shadow:var(--ombre)}
+  .form .opt{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--rouge);background:#FDEDEC;border:1px solid #F6CFCC;border-radius:999px;padding:5px 11px;margin-bottom:12px}
+  .form h3{font-size:19px;font-weight:600;margin-bottom:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+  .field label{display:block;font-size:12px;font-weight:800;color:var(--gris);margin-bottom:5px}
+  .field input,.field select{width:100%;border:1px solid var(--ligne);border-radius:10px;padding:11px 12px;font-size:14px;font-family:inherit;background:var(--fond);color:var(--encre)}
+  .form .btn{width:100%;margin-top:4px}
+  .form .note{font-size:12px;color:var(--gris);text-align:center;margin-top:10px}
+  .form .demo-msg{display:none;margin-top:12px;background:#FFF7E8;border:1px solid #F0DCB2;color:#7A5A17;border-radius:10px;padding:12px 14px;font-size:13.5px;font-weight:700;text-align:center}
+  .form.envoyee .demo-msg{display:block}
+
+  /* Infos pratiques */
+  .infos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:780px){.infos-grid{grid-template-columns:1fr}}
+  .info{background:#fff;border:1px solid var(--ligne);border-radius:16px;padding:22px;box-shadow:var(--ombre)}
+  .info h3{font-size:16px;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:9px}
+  .info h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--rouge)}
+  .info p{font-size:14px;color:var(--encre)}
+  .info .sous{color:var(--gris);font-size:13px;margin-top:6px}
+  .info ul{list-style:none;font-size:14px}
+  .day{display:flex;justify-content:space-between;border-bottom:1px dashed var(--ligne);padding:5px 0}
+  .day:last-child{border-bottom:none}
+  .day b{color:var(--marine)}
+
+  footer{background:var(--marine-fonce);color:#AEBCC6;padding:42px 0 32px;text-align:center}
+  footer img{height:56px;margin:0 auto 12px;filter:brightness(0) invert(1);opacity:.92}
+  footer .fscript{font-family:"Grand Hotel",cursive;font-size:22px;color:#F2B441}
+  footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:14px 0;font-size:13.5px}
+  footer .links a:hover{color:#fff}
+  footer .ew{margin-top:16px;font-size:11.5px;color:#7D909C}
+  footer .ew a{color:#C9D3DB;text-decoration:underline;text-underline-offset:2px}
+
+  /* Pastilles fixes */
+  .maquette-tag{position:fixed;bottom:12px;left:12px;z-index:60;background:var(--marine-fonce);color:#fff;font-size:11px;padding:7px 12px;border-radius:999px;opacity:.88}
+  .switch-tag{position:fixed;bottom:12px;right:12px;z-index:60;background:#fff;color:var(--marine);border:1px solid var(--ligne);font-size:11.5px;font-weight:800;padding:7px 13px;border-radius:999px;box-shadow:0 6px 18px rgba(38,56,74,.18);opacity:.94;transition:.15s}
+  .switch-tag:hover{color:var(--rouge);border-color:var(--rouge)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="horaires">Mardi – samedi : midi &amp; soir · Dimanche : 18h30 – 21h30 · <b>Lundi fermé</b></span>
+    <span>Réservation : <a href="tel:0327644310">03 27 64 43 10</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <img class="logo" src="../photos/logo.png" alt="Le Saint Lazare — Brasserie, Restauration, Friterie">
+    <nav class="menu">
+      <a href="#maison">La maison</a>
+      <a href="#carte">La carte</a>
+      <a href="#avis">Avis</a>
+      <a href="#infos">Infos pratiques</a>
+      <a href="#resa" class="btn btn-rouge">Réserver</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HÉRO — l'identité actuelle : fond blanc, marine + rouge du logo -->
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="script">Bienvenue au Saint Lazare</span>
+      <h1>Brasserie, restauration <em>&amp; friterie</em> à Maubeuge</h1>
+      <p class="lead">Cuisine traditionnelle et portions généreuses, au 15 Route d'Avesnes. Sur place, à emporter ou en livraison — et la frite fraîche, bien sûr.</p>
+      <div class="cta">
+        <a href="tel:0327644310" class="btn btn-rouge">☎ 03 27 64 43 10</a>
+        <a href="#carte" class="btn btn-contour">Voir la carte</a>
+      </div>
+      <div class="badges">
+        <span class="badge"><span class="stars">★★★★☆</span> 4,4/5 · 653 avis Google</span>
+        <span class="badge">Travellers' Choice — TripAdvisor</span>
+      </div>
+    </div>
+    <div class="visuel">
+      <!-- Photos = illustrations issues du site actuel, à remplacer par les vôtres -->
+      <img src="../photos/accueil.jpg" alt="Bières pression et frites fraîches — l'esprit du Saint Lazare">
+      <div class="ruban">Depuis toujours, la frite fraîche</div>
+    </div>
+  </div>
+</div>
+
+<div class="fil">
+  <div class="wrap">
+    <span><b>·</b> Portions copieuses</span>
+    <span><b>·</b> Service rapide</span>
+    <span><b>·</b> Titres-restaurant acceptés</span>
+    <span><b>·</b> Livraison via Uber Eats</span>
+  </div>
+</div>
+
+<!-- LA MAISON — les quatre univers du site actuel -->
+<section id="maison">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script">La maison</span>
+      <h2>Une adresse, quatre façons d'en profiter</h2>
+      <p>Brasserie, friterie-snack, plats à emporter et livraison : la même cuisine, servie comme vous préférez.</p>
+    </div>
+    <!-- Photos = illustrations issues du site actuel, à remplacer par les vôtres -->
+    <div class="services">
+      <div class="service"><img src="../photos/Brasserie-a-Maubeuge.jpeg" alt="Brasserie à Maubeuge">
+        <div class="txt"><h3>Brasserie <span>à Maubeuge</span></h3><p>La table conviviale, midi et soir : assiettes chaudes, salades et suggestions, dans l'esprit brasserie.</p></div></div>
+      <div class="service"><img src="../photos/Friterie-snack-a-Maubeuge.jpeg" alt="Friterie et snack à Maubeuge">
+        <div class="txt"><h3>Friterie &amp; snack <span>à Maubeuge</span></h3><p>Frites fraîches, américains, burgers et sauces au choix — l'influence belge revendiquée.</p></div></div>
+      <div class="service"><img src="../photos/Plats-a-emporter-a-Maubeuge.jpeg" alt="Plats à emporter à Maubeuge">
+        <div class="txt"><h3>Plats à emporter <span>à Maubeuge</span></h3><p>Toute la carte, préparée à emporter : commandez par téléphone, on vous dit quand passer.</p></div></div>
+      <div class="service"><img src="../photos/Livraison-a-Maubeuge.jpeg" alt="Livraison à Maubeuge">
+        <div class="txt"><h3>Livraison <span>à Maubeuge</span></h3><p>En direct par téléphone ou via Uber Eats. Titres-restaurant acceptés (Swile, Pluxee).</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LA CARTE — relevé de la carte en vigueur -->
+<section id="carte" class="carte">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script">La carte</span>
+      <h2>Ce qui sort de nos cuisines</h2>
+    </div>
+    <p class="note-haut">Carte et prix relevés sur la carte en vigueur (juin 2026) — à ajuster ensemble, modifiable en autonomie.</p>
+    <div class="carte-grille">
+
+      <div class="cat">
+        <h3>Américains <span class="fil-note">sauce au choix incluse</span></h3>
+        <div class="plat"><span class="nom">Saucisse</span><span class="pointes"></span><span class="prix">6,40&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Fricadelle</span><span class="pointes"></span><span class="prix">6,40&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Merguez</span><span class="pointes"></span><span class="prix">7,40&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Cervelas</span><span class="pointes"></span><span class="prix">7,70&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Boulette maison</span><span class="pointes"></span><span class="prix">9,00&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Steak haché 150&nbsp;g</span><span class="pointes"></span><span class="prix">9,20&nbsp;€</span></div>
+        <p class="mention">Suppléments crudités, fromage ou bacon : +0,50&nbsp;€.</p>
+      </div>
+
+      <div class="cat">
+        <h3>Hamburgers</h3>
+        <div class="plat"><span class="nom">Hamburger</span><span class="pointes"></span><span class="prix">5,00&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Cheeseburger</span><span class="pointes"></span><span class="prix">5,40&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Fish burger</span><span class="pointes"></span><span class="prix">5,80&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Maxi burger</span><span class="pointes"></span><span class="prix">6,80&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Burger maison</span><span class="pointes"></span><span class="prix">9,80&nbsp;€</span></div>
+      </div>
+
+      <div class="cat">
+        <h3>Assiettes chaudes <span class="fil-note">servies avec frites</span></h3>
+        <div class="plat"><span class="nom">Brochette de bœuf</span><span class="pointes"></span><span class="prix">12,20&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Steak haché 150&nbsp;g</span><span class="pointes"></span><span class="prix">12,50&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Omelette provençale</span><span class="pointes"></span><span class="prix">12,50&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Carbonnade flamande</span><span class="pointes"></span><span class="prix">15,00&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Bavette Angus</span><span class="pointes"></span><span class="prix">15,50&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Entrecôte</span><span class="pointes"></span><span class="prix">18,50&nbsp;€</span></div>
+        <p class="mention">Sauce chaude maison (poivre, maroilles…) : +2,00&nbsp;€.</p>
+      </div>
+
+      <div class="cat">
+        <h3>Salades</h3>
+        <div class="plat"><span class="nom">Salade du pêcheur</span><span class="pointes"></span><span class="prix">14,00&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Salade du chef</span><span class="pointes"></span><span class="prix">14,00&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Salade calamars</span><span class="pointes"></span><span class="prix">14,00&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Salade mixte</span><span class="pointes"></span><span class="prix">16,00&nbsp;€</span></div>
+      </div>
+
+      <div class="cat">
+        <h3>Pittas &amp; sandwichs</h3>
+        <div class="plat"><span class="nom">Barquette</span><span class="pointes"></span><span class="prix">5,60&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Sandwich pitta</span><span class="pointes"></span><span class="prix">6,80&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Dürüm</span><span class="pointes"></span><span class="prix">6,80&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Américain (sandwich)</span><span class="pointes"></span><span class="prix">9,30&nbsp;€</span></div>
+      </div>
+
+      <div class="cat">
+        <h3>Frites, sauces &amp; boissons</h3>
+        <div class="plat"><span class="nom">Frites — petite · moyenne · grande</span><span class="pointes"></span><span class="prix">3,00 · 3,50 · 4,00&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Sauce froide</span><span class="pointes"></span><span class="prix">0,80&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Sauce chaude</span><span class="pointes"></span><span class="prix">2,00&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Coca-Cola · Orangina 33&nbsp;cl</span><span class="pointes"></span><span class="prix">2,30&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Bière blonde 33&nbsp;cl</span><span class="pointes"></span><span class="prix">3,90&nbsp;€</span></div>
+        <div class="plat"><span class="nom">Anosteke 33&nbsp;cl</span><span class="pointes"></span><span class="prix">5,40&nbsp;€</span></div>
+        <p class="mention">Sauces au choix : andalouse, samouraï, mayonnaise, ketchup, barbecue, provençale, tartare, poivre, béarnaise, moutarde. La carte comprend aussi une sélection de vins.</p>
+      </div>
+
+    </div>
+    <p class="carte-bas">Une question, une allergie ? Appelez-nous au <a href="tel:0327644310" style="color:var(--rouge);font-weight:800">03 27 64 43 10</a>.</p>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section id="avis">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script">Vos avis</span>
+      <h2>4,4/5 sur Google — merci</h2>
+      <p>653 avis déposés, et une mention Travellers' Choice sur TripAdvisor.</p>
+    </div>
+    <div class="avis-grid">
+      <div class="avis"><div class="stars">★★★★★</div><q>Plat très copieux, rapport qualité-prix incroyable. Service très rapide. Je recommande.</q><div class="who">— Jojo P., oct. 2024</div></div>
+      <div class="avis"><div class="stars">★★★★★</div><q>Parfait. Serveurs géniaux, service très rapide et juste délicieux. On s'est régalé.</q><div class="who">— David D., juin 2024</div></div>
+      <div class="avis"><div class="stars">★★★★☆</div><q>Accueil sympa, endroit propre et bien aménagé. On sent l'influence belge. Rapport qualité-prix excellent&nbsp;!</q><div class="who">— Parenna G., juin 2023</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSERVATION — le téléphone d'abord (fonctionnement actuel), module en ligne optionnel -->
+<section id="resa" class="resa">
+  <div class="wrap">
+    <div>
+      <span class="script">Réserver une table</span>
+      <h2>On vous garde une place</h2>
+      <p>La réservation se fait par téléphone, midi et soir. Pour les groupes, un coup de fil suffit — on s'organise.</p>
+      <div class="tel-bloc">
+        <span class="lbl">Réservation par téléphone</span>
+        <a class="num" href="tel:0327644310">03 27 64 43 10</a>
+        <small>Mardi – samedi midi &amp; soir · dimanche soir · lundi fermé</small>
+      </div>
+    </div>
+    <form class="form" id="form-resa" novalidate>
+      <span class="opt">Module optionnel — démonstration</span>
+      <h3>Réserver en ligne</h3>
+      <div class="row">
+        <div class="field"><label for="r-date">Date</label><input id="r-date" type="date"></div>
+        <div class="field"><label for="r-service">Service</label><select id="r-service"><option>Midi</option><option selected>Soir</option></select></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="r-heure">Heure</label><select id="r-heure"><option>19:00</option><option selected>19:30</option><option>20:00</option><option>20:30</option></select></div>
+        <div class="field"><label for="r-couverts">Couverts</label><select id="r-couverts"><option>2</option><option selected>4</option><option>6</option><option>8 +</option></select></div>
+      </div>
+      <div class="field" style="margin-bottom:12px"><label for="r-nom">Nom</label><input id="r-nom" type="text" placeholder="Votre nom" autocomplete="name"></div>
+      <div class="field" style="margin-bottom:14px"><label for="r-contact">Téléphone ou email</label><input id="r-contact" type="text" placeholder="Pour la confirmation" autocomplete="tel"></div>
+      <button type="submit" class="btn btn-rouge">Demander cette table</button>
+      <div class="demo-msg" role="status">Démonstration — module optionnel, activable plus tard. Aucune donnée n'est envoyée.</div>
+      <div class="note">Le téléphone reste le canal de réservation. Ce module s'active seulement si vous le souhaitez.</div>
+    </form>
+  </div>
+</section>
+
+<!-- INFOS PRATIQUES -->
+<section id="infos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="script">Infos pratiques</span>
+      <h2>Nous trouver, nous joindre</h2>
+    </div>
+    <div class="infos-grid">
+      <div class="info"><h3>Adresse</h3>
+        <p>15 Route d'Avesnes<br>59600 Maubeuge</p>
+        <p class="sous">Réservation et commande : <a href="tel:0327644310" style="color:var(--rouge);font-weight:800">03 27 64 43 10</a></p></div>
+      <div class="info"><h3>Horaires</h3><ul>
+        <li class="day"><span>Lundi</span><b>Fermé</b></li>
+        <li class="day"><span>Mardi – samedi</span><b>midi &amp; soir</b></li>
+        <li class="day"><span>Dimanche</span><b>18h30 – 21h30</b></li></ul></div>
+      <div class="info"><h3>Emporter &amp; livraison</h3>
+        <p>En direct par téléphone ou via <b>Uber Eats</b>. Titres-restaurant acceptés (Swile, Pluxee).</p>
+        <p class="sous">Sur place, à emporter ou livré : la même carte.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="../photos/logo.png" alt="Le Saint Lazare">
+    <div class="fscript">À très vite, autour d'une frite</div>
+    <div class="links"><a href="#maison">La maison</a><a href="#carte">La carte</a><a href="#resa">Réserver</a><a href="#infos">Infos</a><a href="tel:0327644310">03 27 64 43 10</a></div>
+    <div>15 Route d'Avesnes, 59600 Maubeuge</div>
+    <div class="ew">Maquette « reprise » — l'identité actuelle du Saint Lazare, remise au propre · réalisée avec Everywhere · <a href="../offre/index.html">L'offre</a></div>
+  </div>
+</footer>
+
+<div class="maquette-tag">Maquette de démonstration — Everywhere</div>
+<a class="switch-tag" href="../">⇄ Voir l'autre version</a>
+
+<script>
+(function(){
+  var f=document.getElementById('form-resa');
+  if(f){f.addEventListener('submit',function(e){e.preventDefault();f.classList.add('envoyee');});}
+})();
+</script>
+</body>
+</html>

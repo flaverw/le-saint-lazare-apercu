@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Carte de visite NFC — Le Saint Lazare (85,6 × 54 mm, prête à imprimer)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Format carte bancaire ISO : 85,6 × 54 mm — chaque face sur sa propre page à l'impression */
+  @page { size: 85.6mm 54mm; margin: 0; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-family:"Inter",system-ui,sans-serif;color:#26384A;background:#F1EDE6}
+
+  .card{position:relative;width:85.6mm;height:54mm;overflow:hidden}
+
+  /* RECTO — blanc, logo */
+  .recto{background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5mm}
+  .recto img{width:51mm;height:auto}
+  .recto .rule{width:18mm;height:.4mm;background:#DD2C24;margin:3mm 0 2.4mm}
+  .recto .tag{font-size:2.5mm;letter-spacing:.28em;text-transform:uppercase;color:#5E6B78;font-weight:600}
+
+  /* VERSO — marine, contacts + QR */
+  .verso{background:#26384A;color:#fff;display:flex;align-items:center;gap:5mm;padding:5.5mm 6mm}
+  .verso .left{flex:1}
+  .verso .name{font-family:"Fraunces",serif;font-weight:600;font-size:5mm;letter-spacing:.02em}
+  .verso .name b{color:#FF7a73}
+  .verso .sub{font-size:2.4mm;letter-spacing:.18em;text-transform:uppercase;color:#9fb0bd;margin-top:.5mm}
+  .verso .rows{margin-top:3.2mm;font-size:2.85mm;line-height:1.75}
+  .verso .rows .r{display:flex;align-items:center;gap:2mm}
+  .verso .rows .dot{width:1.4mm;height:1.4mm;border-radius:50%;background:#DD2C24;flex:none}
+  .verso .qrbox{background:#fff;border-radius:2mm;padding:1.6mm;width:23mm;height:23mm;display:flex;align-items:center;justify-content:center;flex:none}
+  .verso .qrbox img{width:100%;height:100%}
+  .verso .qcap{font-size:2.1mm;color:#9fb0bd;text-align:center;margin-top:1.4mm;line-height:1.3}
+  .verso .nfc{position:absolute;bottom:2.6mm;right:6mm;font-size:1.9mm;letter-spacing:.12em;text-transform:uppercase;color:#7d909c}
+
+  /* ——— Habillage écran (masqué à l'impression) ——— */
+  .ecran{max-width:560px;margin:0 auto;padding:34px 20px 44px}
+  .ecran h1{font-family:"Fraunces",serif;font-weight:600;font-size:24px;color:#26384A}
+  .ecran p.intro{font-size:13.5px;color:#5E6B78;margin-top:8px;line-height:1.55}
+  .face{margin-top:24px}
+  .face .lbl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7F6C;font-weight:600;margin-bottom:8px}
+  .face .card{box-shadow:0 14px 34px rgba(38,56,74,.22);border-radius:3mm}
+  .actions{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn-print{background:#DD2C24;color:#fff;border:none;border-radius:999px;padding:12px 22px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit}
+  .btn-print:hover{background:#B81F19}
+  .retour{font-size:13px;color:#26384A;text-decoration:underline;text-underline-offset:2px}
+  .note{margin-top:18px;font-size:11.5px;color:#8a8375;line-height:1.6}
+
+  @media print{
+    body{background:#fff}
+    .ecran{max-width:none;margin:0;padding:0}
+    .ecran h1,.ecran p.intro,.face .lbl,.actions,.note{display:none}
+    .face{margin:0}
+    .face .card{box-shadow:none;border-radius:0;page-break-after:always}
+    .face:last-of-type .card{page-break-after:auto}
+  }
+</style>
+</head>
+<body>
+<div class="ecran">
+  <h1>La carte de visite NFC</h1>
+  <p class="intro">Une carte qu'on approche du téléphone — le QR au dos en repli. Elle ouvre le site, la réservation et le contact en un geste. Format carte bancaire : <b>85,6 × 54&nbsp;mm</b>, recto-verso, prête à imprimer.</p>
+
+  <div class="face">
+    <div class="lbl">Recto</div>
+    <div class="card recto">
+      <img src="../photos/logo.png" alt="Le Saint Lazare">
+      <div class="rule"></div>
+      <div class="tag">Brasserie · Friterie · Maubeuge</div>
+    </div>
+  </div>
+
+  <div class="face">
+    <div class="lbl">Verso</div>
+    <div class="card verso">
+      <div class="left">
+        <div class="name">Le Saint <b>Lazare</b></div>
+        <div class="sub">Brasserie · Friterie</div>
+        <div class="rows">
+          <div class="r"><span class="dot"></span>15 Route d'Avesnes, 59600 Maubeuge</div>
+          <div class="r"><span class="dot"></span>03 27 64 43 10</div>
+          <div class="r"><span class="dot"></span>le-saint-lazare.fr</div>
+        </div>
+      </div>
+      <div>
+        <div class="qrbox"><img src="qr-saintlazare.png" alt="QR — réserver, commander, voir la carte"></div>
+        <div class="qcap">Réserver · Commander<br>Voir la carte</div>
+      </div>
+      <div class="nfc">Carte sans contact — approchez votre téléphone</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn-print" onclick="window.print()">Imprimer la carte</button>
+    <a class="retour" href="../">Revenir à la maquette</a>
+  </div>
+  <p class="note">À l'impression, chaque face sort sur sa propre page au format exact 85,6 × 54&nbsp;mm (fond perdu à prévoir avec l'imprimeur). Démonstration Everywhere — puce NFC encodée à la fabrication.</p>
+</div>
+</body>
+</html>
